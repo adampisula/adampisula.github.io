@@ -26,7 +26,9 @@
     ?>
     <body>
         <div class="home">
-            <h1 class="header">ADAM PISULA</h1>
+            <div class="header">
+                <h1 class="header">ADAM&nbsp;PISULA</h1>
+            </div>
         </div>
         <div class="aboutme">
             <h1 class="header">ABOUT ME</h1>
@@ -41,6 +43,20 @@
         </div>
     </body>
     <script>
+        //LOGO
+        $(document).ready(function() { resize() });
+        $(window).resize(function() { resize() });
+
+        function resize() {
+            console.log($(document).width());
+            
+            if($(document).width() < 800)
+                $('div.header').html('<img src="src/logo.png" alt="ADAM PISULA" title="ADAM PISULA" width="125" height="125" />');
+            else
+                $('div.header').html('<h1 class="header">ADAM&nbsp;PISULA</h1>');
+        }
+        
+        //NAVBAR
         $('div.navbar p.home').click(function() {
             $('html, body').animate({
                 scrollTop: $('div.home').offset().top

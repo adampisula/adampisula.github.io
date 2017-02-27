@@ -3,10 +3,6 @@ h1.header {
     font-size: 48px;
     font-weight: 300;
     letter-spacing: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     border: 2px solid white;
     padding: 15px 45px;
     color: white;
@@ -19,4 +15,11 @@ h1.header {
 h1.header:hover {
     background-color: white;
     color: black;
+}
+
+.header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
