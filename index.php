@@ -14,6 +14,7 @@
         <link href="css/navbar.css" rel="stylesheet" />
         <link href="css/home.css" rel="stylesheet" />
         <link href="css/aboutme.css" rel="stylesheet" />
+        <link href="css/portfolio.css" rel="stylesheet" />
     </head>
     <?php
         $directory = 'img/';
@@ -30,10 +31,32 @@
         <div class="aboutme">
             <h1 class="header">ABOUT ME</h1>
         </div>
+        <div class="portfolio">
+            <h1 class="header">PORTFOLIO</h1>
+        </div>
         <div class="navbar">
-            <p>HOME</p>
-            <p>ABOUT ME</p>
-            <p>PORTFOLIO</p>
+            <p class="home">HOME</p>
+            <p class="aboutme">ABOUT ME</p>
+            <p class="portfolio">PORTFOLIO</p>
         </div>
     </body>
+    <script>
+        $('div.navbar p.home').click(function() {
+            $('html, body').animate({
+                scrollTop: $('div.home').offset().top
+            }, 'slow');
+        });
+        
+        $('div.navbar p.aboutme').click(function() {
+            $('html, body').animate({
+                scrollTop: $('div.aboutme').offset().top
+            }, 'slow');
+        });
+
+        $('div.navbar p.portfolio').click(function() {
+            $('html, body').animate({
+                scrollTop: $('div.portfolio').offset().top
+            }, 'slow');
+        });
+    </script>
 </html>
