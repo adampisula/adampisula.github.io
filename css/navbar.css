@@ -1,0 +1,25 @@
+div.navbar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+div.navbar p {
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 4px;
+    margin-left: 10px;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s all linear;
+    -webkit-transition: 0.3s all linear;
+    padding-left: 4px;
+    padding-bottom: 2px;
+    z-index: 99;
+}
+
+div.navbar p:hover {
+    border-bottom-color: white;
+}
