@@ -6,10 +6,12 @@ h1.header {
     border: 2px solid white;
     padding: 15px 45px;
     color: white;
-    cursor: pointer;
-    transition: 0.3s all linear;
-    -webkit-transition: 0.3s all linear;
     background: rgba(255, 255, 255, 0.15);
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 h1.header:hover {
@@ -22,4 +24,12 @@ h1.header:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: 0.3s all linear;
+    -webkit-transition: 0.3s all linear;
+}
+
+div.header img.header:hover {
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
 }
