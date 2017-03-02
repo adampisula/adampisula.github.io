@@ -60,11 +60,11 @@
                     while (($line = fgets($handle)) !== false) {
                         $expline = explode('|', $line);
 
-                        $name = $expline[0];
+                        $name = strtoupper($expline[0]);
                         $thumbnail = "projects/".strtolower($name).".png";
                         $address = $expline[1];
                         $github = $expline[2];
-                        $authors = $expline[3];
+                        $authors = strtoupper($expline[3]);
                         $status = $expline[4];
                         
                         if($status == 0)
@@ -72,13 +72,9 @@
                         else if($status == 1)
                             $status = "IN PROGRESS ↺";
                         else
-                            $status = "IT'S DONE!";
+                            $status = "DONE";
 
-<<<<<<< HEAD
-                        echo "<div class='thumbnail' style='background-image: url(".$thumbnail.")'><div class='filter'></div><a href='".$address."' target='_blank'>".$name."</a></div>";
-=======
-                        echo "<div class='thumbnail' style='background-image: url(".$thumbnail.")'><div class='filter'></div><a href='".$address." target='_blank'><b>".$name."</b> ↯</a><br>".$authors."<br>".$status."</div>";
->>>>>>> ba3ffc03998b3d957d18ba36ca9d17738c34af92
+                        echo "<a href='".$address."' target='_blank'><div class='thumbnail' style='background-image: url(".$thumbnail.")'><div class='filter'></div><p><b>".$name."</b><br>".$authors."<br>".$status."</p></div></a>";
                     }
 
                     fclose($handle);
@@ -92,7 +88,6 @@
         </div>
     </body>
     <script>
-        //LOGO
         $(document).ready(function() { 
             resize();
             

@@ -1,8 +1,2 @@
 Peneplena|http://www.peneplena.pl/|#|Adam Pisula|2
-Peneplena|http://www.peneplena.pl/|#|Adam Pisula|2
-Peneplena|http://www.peneplena.pl/|#|Adam Pisula|2
-Peneplena|http://www.peneplena.pl/|#|Adam Pisula|2
-Peneplena|http://www.peneplena.pl/|#|Adam Pisula|2
-Peneplena|http://www.peneplena.pl/|#|Adam Pisula|2
-Peneplena|http://www.peneplena.pl/|#|Adam Pisula|2
-Peneplena|http://www.peneplena.pl/|#|Adam Pisula|2
+Portfolio|http://adampisula-desktop/portfolio/|https://github.com/adampisula/portfolio/|Adam Pisula|1

@@ -14,6 +14,7 @@ div.portfolio div.thumbnail {
     filter: grayscale(1);
     -webkit-filter: grayscale(1);
     text-align: center;
+    padding: 0;
 }
 
 div.portfolio div.thumbnail .content {
@@ -26,11 +27,11 @@ div.portfolio div.thumbnail:hover {
 }
 
 div.portfolio div.thumbnail:hover div.filter {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.75);
 }
 
-div.portfolio div.thumbnail:hover .content {
-    display: inline-block;
+div.portfolio div.thumbnail:hover p,a {
+    color: white;
 }
 
 div.portfolio div.thumbnail div.filter {
@@ -50,7 +51,13 @@ div.portfolio div.center {
     transform: translate(-50%, -50%);
 }
 
-div.portfolio div.content a {
+div.portfolio div.thumbnail p,a {
     text-decoration: none;
-    color: white;
+    color: transparent;
+    margin-top: -100px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    transition: 0.3s all ease-out;
+    -webkit-transition: 0.3s all ease-out;
 }
