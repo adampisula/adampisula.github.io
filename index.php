@@ -66,8 +66,19 @@
                         $github = $expline[2];
                         $authors = $expline[3];
                         $status = $expline[4];
+                        
+                        if($status == 0)
+                            $status = "ONLY AN IDEA &#128161";
+                        else if($status == 1)
+                            $status = "IN PROGRESS ↺";
+                        else
+                            $status = "IT'S DONE!";
 
+<<<<<<< HEAD
                         echo "<div class='thumbnail' style='background-image: url(".$thumbnail.")'><div class='filter'></div><a href='".$address."' target='_blank'>".$name."</a></div>";
+=======
+                        echo "<div class='thumbnail' style='background-image: url(".$thumbnail.")'><div class='filter'></div><a href='".$address." target='_blank'><b>".$name."</b> ↯</a><br>".$authors."<br>".$status."</div>";
+>>>>>>> ba3ffc03998b3d957d18ba36ca9d17738c34af92
                     }
 
                     fclose($handle);
