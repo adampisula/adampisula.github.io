@@ -2,6 +2,7 @@ div.navbar {
     position: fixed;
     top: 20px;
     right: 20px;
+    white-space: nowrap;
 }
 
 div.navbar p {
@@ -18,6 +19,11 @@ div.navbar p {
     padding-left: 4px;
     padding-bottom: 2px;
     z-index: 99;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 div.navbar p:hover {

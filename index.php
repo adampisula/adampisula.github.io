@@ -56,7 +56,6 @@
             <div class="center">
                 <?php
                     $handle = fopen("src/projects.txt", "r") or die("Unable to open projects.txt!");
-                    $projects = array();
 
                     while (($line = fgets($handle)) !== false) {
                         $expline = explode('|', $line);
@@ -68,7 +67,7 @@
                         $authors = $expline[3];
                         $status = $expline[4];
 
-                        echo "<div class='thumbnail' style='background-image: url(".$thumbnail.")'><div class='filter'></div><a href='".$address." target='_blank'>".$name."</div>";
+                        echo "<div class='thumbnail' style='background-image: url(".$thumbnail.")'><div class='filter'></div><a href='".$address."' target='_blank'>".$name."</a></div>";
                     }
 
                     fclose($handle);
@@ -83,7 +82,29 @@
     </body>
     <script>
         //LOGO
-        $(document).ready(function() { resize(); var header = $('h1.header'); header.unselectable = "on"; });
+        $(document).ready(function() { 
+            resize();
+            
+            var header = $('h1.header');
+            var navbar = $('div.navbar p');
+            header.unselectable = "on";
+            navbar.unselectable = "on";
+            
+            $(window).scroll( function () {
+                var scroll = $(this).scrollTop();
+
+                if ((scroll > 10 && scroll < $(window).height()) || (scroll > $(window).height() + 10 && scroll < 2 * $(window).height()) || scroll > 2 * $(window).height() + 10) {
+                    $('div.navbar p.home').text('H');
+                    $('div.navbar p.aboutme').text('AM');
+                    $('div.navbar p.portfolio').text('P');
+                }
+                else {
+                    $('div.navbar p.home').text('HOME');
+                    $('div.navbar p.aboutme').text('ABOUT ME');
+                    $('div.navbar p.portfolio').text('PORTFOLIO');
+                }
+            });
+        });
         $(window).resize(function() { resize(); });
 
         function isMobile() {
@@ -97,12 +118,12 @@
             if($(document).width() < 430) {
                 $('div.navbar p.home').text('H');
                 $('div.navbar p.aboutme').text('AM');
-                $('div.navbar p.portfolio').text('P');
+                $('div.navbar p.portfolio').text('P');    
             }
             else {
                 $('div.navbar p.home').text('HOME');
                 $('div.navbar p.aboutme').text('ABOUT ME');
-                $('div.navbar p.portfolio').text('PORTFOLIO');
+                $('div.navbar p.portfolio').text('PORTFOLIO');  
             }
 
             if($(document).width() < 600)
