@@ -61,3 +61,11 @@ div.portfolio div.thumbnail p,a {
     transition: 0.3s all ease-out;
     -webkit-transition: 0.3s all ease-out;
 }
+
+div.portfolio div.thumbnail a i {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    color: white;
+    font-size: 29px;
+}

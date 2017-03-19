@@ -1,0 +1,39 @@
+div.info {
+    height: 140px;
+    width: 100%;
+    position: absolute;
+    top: 300%;
+    left: 0;
+}
+
+div.info p {
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+div.info p.author {
+    position: absolute;
+    bottom: 9px;
+    right: 20px;
+}
+
+div.info div.rectangle {
+    width: 100%;
+    height: 80px;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+div.info div.triangle {
+    width: 0;
+    height: 0;
+    border-right: solid white;
+    border-top: 60px solid transparent;
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+}

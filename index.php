@@ -27,6 +27,7 @@
 
         <!--CSS-->
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400&amp;subset=latin-ext" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet" />
         <link href="css/header.css" rel="stylesheet" />
         <link href="css/body.css" rel="stylesheet" />
         <link href="css/navbar.css" rel="stylesheet" />
@@ -34,6 +35,7 @@
         <link href="css/aboutme.css" rel="stylesheet" />
         <link href="css/portfolio.css" rel="stylesheet" />
         <link href="css/portfolio-thumbnail.css" rel="stylesheet" />
+        <link href="css/info.css" rel="stylesheet" />
     </head>
     <?php
         $directory = 'img/';
@@ -68,17 +70,30 @@
                         $status = $expline[4];
                         
                         if($status == 0)
-                            $status = "ONLY AN IDEA &#128161";
+                            $status = "&#128161";
                         else if($status == 1)
-                            $status = "IN PROGRESS ↺";
+                            $status = "↺";
                         else
                             $status = "DONE";
 
-                        echo "<a href='".$address."' target='_blank'><div class='thumbnail' style='background-image: url(".$thumbnail.")'><div class='filter'></div><p><b>".$name."</b><br>".$authors."<br>".$status."</p></div></a>";
+                        $ghlink = '';
+
+                        if($github != "#")
+                        {
+                            $ghlink = "<a href='".$github."'><i class='fa fa-github' aria-hidden='true'></i></a>";
+                        }
+
+                        echo "<a href='".$address."' target='_blank'><div class='thumbnail' style='background-image: url(".$thumbnail.")'><div class='filter'></div>".$ghlink."<p><b>".$name."</b><br>".$authors."<br>".$status."</p></div></a>";
                     }
 
                     fclose($handle);
                 ?>
+            </div>
+        </div>
+        <div class="info">
+            <div class="triangle"></div>
+            <div class="rectangle">
+                <p class="author"><b>ADAM PISULA 2017</b></p>
             </div>
         </div>
         <div class="navbar">
@@ -91,10 +106,8 @@
         $(document).ready(function() { 
             resize();
             
-            var header = $('h1.header');
-            var navbar = $('div.navbar p');
-            header.unselectable = "on";
-            navbar.unselectable = "on";
+            var unsel = $('p,h1,h2,h3,h4,h5,h6,a,span');
+            unsel.unselectable = "on";
             
             $(window).scroll( function () {
                 var scroll = $(this).scrollTop();
@@ -111,6 +124,7 @@
                 }
             });
         });
+
         $(window).resize(function() { resize(); });
 
         function isMobile() {
@@ -136,6 +150,8 @@
                 $('div.header').html('<img src="src/logo.png" class="header" alt="ADAM PISULA" title="ADAM PISULA" width="125" height="125" />');
             else
                 $('div.header').html('<h1 class="header">ADAM&nbsp;PISULA</h1>');
+
+            $('div.info div.triangle').css('border-right-width', $(document).width());
         }
         
         //NAVBAR
