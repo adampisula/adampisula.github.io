@@ -37,14 +37,6 @@
         <link href="css/portfolio-thumbnail.css" rel="stylesheet" />
         <link href="css/info.css" rel="stylesheet" />
     </head>
-    <?php
-        $directory = 'img/';
-        $files = glob($directory.'*.png');
-
-        $random = rand(0, count($files) - 1);
-
-        echo "<script>jQuery(document).ready(function() { jQuery('body').css('background-image', 'url(" . $files[$random] . ")')});</script>";
-    ?>
     <body>
         <div class="home">
             <div class="header">
