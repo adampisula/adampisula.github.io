@@ -4,8 +4,8 @@
         <meta charset="utf-8" />
         <title>Adam Pisula</title>
         
-	<meta name="msapplication-TileColor" content="#333333">
-        <meta name="theme-color" content="#333333">
+	<meta name="msapplication-TileColor" content="#0a0a0a">
+        <meta name="theme-color" content="#0a0a0a">
 
         <!--JS-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -20,6 +20,7 @@
         <link href="css/aboutme.css" rel="stylesheet" />
         <link href="css/portfolio.css" rel="stylesheet" />
         <link href="css/portfolio-thumbnail.css" rel="stylesheet" />
+        <link href="css/contact.css" rel="stylesheet" />
         <link href="css/info.css" rel="stylesheet" />
     </head>
     <body>
@@ -29,7 +30,7 @@
             </div>
         </div>
         <div class="aboutme">
-            <h1 class="header">ABOUT ME</h1>
+            <h1 class="header">ABOUT&nbsp;ME</h1>
         </div>
         <div class="portfolio">
             <div class="center">
@@ -45,6 +46,9 @@
 		</a>
             </div>
         </div>
+        <div class="contact">
+            <h1 class="header">CONTACT</h1>
+        </div>
         <div class="info">
             <div class="triangle"></div>
             <div class="rectangle">
@@ -55,6 +59,7 @@
             <p class="home">HOME</p>
             <p class="aboutme">ABOUT ME</p>
             <p class="portfolio">PORTFOLIO</p>
+	    <p class="contact">CONTACT</p>
         </div>
     </body>
     <script>
@@ -71,11 +76,13 @@
                     $('div.navbar p.home').text('H');
                     $('div.navbar p.aboutme').text('AM');
                     $('div.navbar p.portfolio').text('P');
+                    $('div.navbar p.contact').text('C');
                 }
                 else {
                     $('div.navbar p.home').text('HOME');
                     $('div.navbar p.aboutme').text('ABOUT ME');
                     $('div.navbar p.portfolio').text('PORTFOLIO');
+                    $('div.navbar p.contact').text('CONTACT');
                 }
             });
         });
@@ -94,11 +101,13 @@
                 $('div.navbar p.home').text('H');
                 $('div.navbar p.aboutme').text('AM');
                 $('div.navbar p.portfolio').text('P');    
+                $('div.navbar p.contact').text('C');
             }
             else {
                 $('div.navbar p.home').text('HOME');
                 $('div.navbar p.aboutme').text('ABOUT ME');
                 $('div.navbar p.portfolio').text('PORTFOLIO');  
+                $('div.navbar p.contact').text('CONTACT');
             }
 
             if($(document).width() < 600)
@@ -125,6 +134,12 @@
         $('div.navbar p.portfolio').click(function() {
             $('html, body').animate({
                 scrollTop: $('div.portfolio').offset().top
+            }, 'slow');
+        });
+
+        $('div.navbar p.contact').click(function() {
+            $('html, body').animate({
+                scrollTop: $('div.contact').offset().top
             }, 'slow');
         });
     </script>
