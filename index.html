@@ -72,7 +72,7 @@
             $(window).scroll( function () {
                 var scroll = $(this).scrollTop();
 
-                if ((scroll > 10 && scroll < $(window).height()) || (scroll > $(window).height() + 10 && scroll < 2 * $(window).height()) || scroll > 2 * $(window).height() + 10) {
+                if (scroll > 10) {
                     $('div.navbar p.home').text('H');
                     $('div.navbar p.aboutme').text('AM');
                     $('div.navbar p.portfolio').text('P');
